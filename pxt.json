@@ -1,17 +1,19 @@
 {
-    "name": "TEJ2O ⇢ Unit #X-YY",
+    "name": "TEJ2O ⇢ final-assignment",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.4.6",
+        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.5"
     },
     "files": [
         "main.ts",
         "README.md"
     ],
     "targetVersions": {
-        "target": "6.0.17",
+        "target": "6.0.25",
         "targetId": "microbit"
     },
     "supportedTargets": [
