@@ -30,6 +30,6 @@ radio.onReceivedString(function (receivedString) {
   basic.pause(500)
   robotbit.StpCarMove(10, 48)
 
-  //sonar - edge detection
+  // sonar - edge detection
   distance = sonar.ping(DigitalPin.P1, DigitalPin.P2, PingUnit.Centimeters) 
 })
