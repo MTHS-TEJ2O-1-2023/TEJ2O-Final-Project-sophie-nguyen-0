@@ -29,7 +29,18 @@ radio.onReceivedString(function (receivedString) {
   robotbit.StepperTurn(robotbit.Steppers.M2, robotbit.Turns.T1B4)
   basic.pause(500)
   robotbit.StpCarMove(10, 48)
-
-  // sonar - edge detection
-  distance = sonar.ping(DigitalPin.P1, DigitalPin.P2, PingUnit.Centimeters) 
 })
+
+if (true) {
+  distance = sonar.ping(
+    DigitalPin.P1,
+    DigitalPin.P2,
+    PingUnit.Centimeters
+  )
+  
+  // edge detection
+  if (distance > 2) {
+    // send go to sophie's microbit
+    radio.sendString('Run')
+  }
+}
