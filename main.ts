@@ -5,10 +5,6 @@
  * This program turns bottle caps.
 */
 
-
-// variables
-let distance: number = 0
-
 // setup
 basic.clearScreen()
 radio.setGroup(5)
@@ -30,17 +26,3 @@ radio.onReceivedString(function (receivedString) {
   basic.pause(500)
   robotbit.StpCarMove(10, 48)
 })
-
-if (true) {
-  distance = sonar.ping(
-    DigitalPin.P1,
-    DigitalPin.P2,
-    PingUnit.Centimeters
-  )
-  
-  // edge detection
-  if (distance > 2) {
-    // send go to sophie's microbit
-    radio.sendString('Run')
-  }
-}
